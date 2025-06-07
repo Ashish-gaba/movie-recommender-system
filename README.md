@@ -93,7 +93,7 @@ Both files are managed with Git LFS for efficient storage and versioning.
 
 ---
 
-## Jupyter Notebook: `movie-recommender-system.ipynb`
+## 📒 Jupyter Notebook: `movie-recommender-system.ipynb`
 
 This notebook contains the full data preprocessing and feature engineering pipeline used to generate the `movies.pkl` and `similarity.pkl` files required by the Streamlit app.
 

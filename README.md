@@ -93,16 +93,6 @@ Both files are managed with Git LFS for efficient storage and versioning.
 
 ---
 
-## 📣 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
 ## Jupyter Notebook: `movie-recommender-system.ipynb`
 
 This notebook contains the full data preprocessing and feature engineering pipeline used to generate the `movies.pkl` and `similarity.pkl` files required by the Streamlit app.
@@ -123,3 +113,8 @@ This notebook contains the full data preprocessing and feature engineering pipel
 
 **Note:**
 The notebook is not required to run the Streamlit app, but is provided for transparency and reproducibility of the data processing pipeline.
+
+
+## 📜 License
+
+This project is licensed under the MIT License.

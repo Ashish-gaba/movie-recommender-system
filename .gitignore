@@ -1,0 +1,27 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local development settings
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Downloaded pickle files
+*.pkl
+
+# Streamlit
+.streamlit/

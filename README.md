@@ -23,6 +23,29 @@ Get personalized movie recommendations based on your favorite film. This app use
 
 ---
 
+## 📒 Jupyter Notebook: `movie-recommender-system.ipynb`
+
+This notebook contains the full data preprocessing and feature engineering pipeline used to generate the `movies.pkl` and `similarity.pkl` files required by the Streamlit app.
+
+**Key steps in the notebook:**
+
+- Loads and merges the TMDB movies and credits datasets.
+- Cleans and processes columns such as genres, keywords, cast, and crew.
+- Creates a combined "tags" column for each movie, aggregating relevant metadata.
+- Applies stemming and vectorization (using Bag of Words) to the tags.
+- Computes the cosine similarity matrix for all movies.
+- Saves the processed DataFrame (`movies.pkl`) and similarity matrix (`similarity.pkl`) for use in the app.
+
+**Usage:**
+
+- You can use this notebook to regenerate the data files if you want to update the recommendations or use a different dataset.
+- To run the notebook, make sure you have the required dependencies (see `requirements.txt`) and the original TMDB datasets.
+
+**Note:**
+The notebook is not required to run the Streamlit app, but is provided for transparency and reproducibility of the data processing pipeline.
+
+---
+
 ## 🛠️ Setup & Installation
 
 1. **Clone the repository:**
@@ -85,35 +108,6 @@ Both files are managed with Git LFS for efficient storage and versioning.
 - [Git LFS](https://git-lfs.github.com/)
 
 ---
-
-## 💡 Customization
-
-- You can easily change the UI or recommendation logic in `app.py`.
-- To use your own TMDB API key, update the `API_KEY` variable in the code.
-
----
-
-## 📒 Jupyter Notebook: `movie-recommender-system.ipynb`
-
-This notebook contains the full data preprocessing and feature engineering pipeline used to generate the `movies.pkl` and `similarity.pkl` files required by the Streamlit app.
-
-**Key steps in the notebook:**
-
-- Loads and merges the TMDB movies and credits datasets.
-- Cleans and processes columns such as genres, keywords, cast, and crew.
-- Creates a combined "tags" column for each movie, aggregating relevant metadata.
-- Applies stemming and vectorization (using Bag of Words) to the tags.
-- Computes the cosine similarity matrix for all movies.
-- Saves the processed DataFrame (`movies.pkl`) and similarity matrix (`similarity.pkl`) for use in the app.
-
-**Usage:**
-
-- You can use this notebook to regenerate the data files if you want to update the recommendations or use a different dataset.
-- To run the notebook, make sure you have the required dependencies (see `requirements.txt`) and the original TMDB datasets.
-
-**Note:**
-The notebook is not required to run the Streamlit app, but is provided for transparency and reproducibility of the data processing pipeline.
-
 
 ## 📜 License
 

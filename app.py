@@ -50,12 +50,48 @@ st.set_page_config(page_title="Movie Recommender", layout="wide")
 st.markdown(
     """
     <style>
+        body {
+            background-color: #181818;
+        }
+        .main {
+            background-color: #181818;
+        }
+        .stApp {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        }
+        /* Remove background and border-radius from columns */
+        [data-testid="stHorizontalBlock"] > div {
+            background: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+        .movie-card {
+            background: #232526;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            padding: 16px 8px 8px 8px;
+            margin: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .movie-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(231,76,60,0.3);
+        }
+        .movie-title {
+            text-align: center;
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
         .stButton>button {
             background-color: #e74c3c;
             color: white;
             font-weight: bold;
             border-radius: 8px;
             padding: 10px 20px;
+            border: none;
         }
         .stButton>button:hover {
             background-color: #c0392b;
@@ -63,13 +99,22 @@ st.markdown(
         .recommend-box {
             margin-top: 40px;
         }
+        .stSelectbox>div>div {
+            color: #e74c3c;
+            font-weight: bold;
+        }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.title("🎬 Movie Recommender System")
-st.markdown("Get personalized movie recommendations based on your favorite film.")
+st.markdown("""
+<div style='text-align:center; margin-bottom: 0;'>
+    <img src='https://img.icons8.com/color/96/000000/movie-projector.png' width='72' style='margin-bottom: -10px;'/>
+    <h1 style='color:#e74c3c; margin-bottom: 0;'>Movie Recommender System</h1>
+    <p style='color:#fff; font-size:1.2rem;'>Get personalized movie recommendations based on your favorite film.</p>
+</div>
+""", unsafe_allow_html=True)
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox("🔍 Choose a movie you like:", movie_list)
@@ -85,5 +130,7 @@ if st.button('🎯 Recommend'):
             cols = st.columns(5)
             for i in range(5):
                 with cols[i]:
+                    st.markdown(f"<div class='movie-card'>", unsafe_allow_html=True)
                     st.image(recommended_movie_posters[i], use_container_width=True)
-                    st.markdown(f"<div style='text-align:center; font-weight:bold;'>{recommended_movie_names[i]}</div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='movie-title'>{recommended_movie_names[i]}</div>", unsafe_allow_html=True)
+                    st.markdown("</div>", unsafe_allow_html=True)

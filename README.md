@@ -102,3 +102,24 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## 📜 License
 
 This project is licensed under the MIT License.
+
+## Jupyter Notebook: `movie-recommender-system.ipynb`
+
+This notebook contains the full data preprocessing and feature engineering pipeline used to generate the `movies.pkl` and `similarity.pkl` files required by the Streamlit app.
+
+**Key steps in the notebook:**
+
+- Loads and merges the TMDB movies and credits datasets.
+- Cleans and processes columns such as genres, keywords, cast, and crew.
+- Creates a combined "tags" column for each movie, aggregating relevant metadata.
+- Applies stemming and vectorization (using Bag of Words) to the tags.
+- Computes the cosine similarity matrix for all movies.
+- Saves the processed DataFrame (`movies.pkl`) and similarity matrix (`similarity.pkl`) for use in the app.
+
+**Usage:**
+
+- You can use this notebook to regenerate the data files if you want to update the recommendations or use a different dataset.
+- To run the notebook, make sure you have the required dependencies (see `requirements.txt`) and the original TMDB datasets.
+
+**Note:**
+The notebook is not required to run the Streamlit app, but is provided for transparency and reproducibility of the data processing pipeline.

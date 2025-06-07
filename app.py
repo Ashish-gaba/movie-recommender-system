@@ -59,13 +59,6 @@ st.markdown(
         .stApp {
             background: linear-gradient(135deg, #232526 0%, #414345 100%);
         }
-        /* Remove background and border-radius from columns */
-        [data-testid="stHorizontalBlock"] > div {
-            background: none !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            padding: 0 !important;
-        }
         .movie-card {
             background: #232526;
             border-radius: 16px;

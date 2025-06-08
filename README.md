@@ -3,6 +3,8 @@
 [![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-ff4b4b?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 
+🌐 **Live Demo**: [movies-recommender.streamlit.app](https://movies-recommender.streamlit.app/)
+
 ---
 
 <img src="https://img.icons8.com/color/96/000000/movie-projector.png" width="80" align="left" style="margin-right: 16px;"/>
